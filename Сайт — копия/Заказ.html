@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Форма</title>
+</head>
+<body>
+<div class="container">
+	<form>
+		<div class="form-group">
+			<label for="emailID">Почтовый ящик</label>
+			<input type="email" class="form-control" id="emailID"
+			aria-describedby="podskazka" placeholder="Введите email">
+			<small id="podskazka" class="form-text text-muted">Клянемся хранить Вашу почту вдали от злых третьих лиц
+			</small>
+		</div>
+	</form>
+
+	<div class="form-group">
+		<label for="sliderID">По шкале от 0 до 5, как вы оцениваете наш сайт
+		</label>
+		<br>
+		<input type="range" class="custom-range" min="0" max="5" id="sliderID">
+	</div>
+	<div class="row form-group">
+	</div>
+	<div class="row">
+		<div class="col-4 form-group">
+			<label for="City">Город</label>
+			<select id="city" class="form-control">
+				<option selected>Москва</option>
+				<option>Казань</option>
+				<option>Санкт-Питербург</option>
+				<option>Уфа</option>
+			</select>
+		</div>
+		<div>
+			<label for="number">Номер телефона для связи с вами
+				<br>
+			формат: +7 111 111-11-11</label>
+			<input type="address" class="form-control" id="number" 
+			aria-describedby="">
+		</div>
+	</div>
+	<button type="submit" class="btn btn-primary">Заказать
+		</button>
+</div>
+<script type="text/javascript">
+	$("#sliderID").on("change", function(){
+		alert($("#sliderID").val());
+	});
+</script>
+
+<div class="text-center">
+	<h1 id="sliderText">
+		3
+	</h1>
+</div>
+
+<script type="text/javascript">
+	$("#sliderID").on("change", function(){
+		$("#sliderText").text($("#sliderID").val());
+	});
+</script>
+<div class="container">
+	<div class="row">
+		
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
